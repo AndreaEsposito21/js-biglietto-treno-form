@@ -9,7 +9,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="generator-ticket">
+        <div class="generator-ticket-row">
+            <label for="nome-utente">Nome utente</label>
+            <input id="nome-utente" type="text" placeholder="Scrivi qualcosa">
+        </div>
+
+        <div class="generator-ticket-row">
+            <label for="distance-km">Km da percorrere</label>
+            <input id="distance-km" type="text" placeholder="Scrivi qualcosa">
+        </div>
+
+        <div class="generator-ticket-row">
+            <label for="eta-utente">Fascia d'età</label>
+            <select id="eta-utente">
+                <option value=""></option>
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over">Over 65</option>
+            </select>
+        </div>
+
+        <div class="generator-ticket-row">
+            <button>Genera</button>
+            <button>Annulla</button>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

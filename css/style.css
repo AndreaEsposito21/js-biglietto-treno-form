@@ -1,0 +1,19 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b91450;
+}
+
+.generator-ticket {
+    background-color: white;
+    margin: 20px;
+}
+
+.generator-ticket-row {
+    padding: 10px 20px;
+}

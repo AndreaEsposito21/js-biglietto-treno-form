@@ -6,35 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto Treno</title>
 
+    <link rel="stylesheet" href="css/12bool.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="generator-ticket">
-        <div class="generator-ticket-row">
-            <label for="nome-utente">Nome utente</label>
+
+    <h2>Calcola il prezzo del tuo biglietto</h2>
+    <!-- Generator Ticket -->
+    <div class="generator-ticket container">
+
+        <!-- Nome Utente -------------- -->
+        <div class="generator-ticket-row col-lg-4">
+            <label for="nome-utente">Nome Cognome</label>
             <input id="nome-utente" type="text" placeholder="Scrivi qualcosa">
         </div>
+        <!-- ---------------------------- -->
 
-        <div class="generator-ticket-row">
+        <!-- Km da percorrere -------------- -->
+        <div class="generator-ticket-row col-lg-4">
             <label for="distance-km">Km da percorrere</label>
-            <input id="distance-km" type="text" placeholder="Scrivi qualcosa">
+            <input id="distance-km" type="number" placeholder="Scrivi qualcosa">
         </div>
+        <!-- ---------------------------- -->
 
-        <div class="generator-ticket-row">
+        <!-- Fascia d'età -------------- -->
+        <div class="generator-ticket-row col-lg-4">
             <label for="eta-utente">Fascia d'età</label>
             <select id="eta-utente">
-                <option value=""></option>
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="over">Over 65</option>
+                <optgroup label="Opzioni">
+                    <option value="minorenne">Minorenne</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="over">Over 65</option>
+                </optgroup>
             </select>
         </div>
+        <!-- ---------------------------- -->
 
-        <div class="generator-ticket-row">
-            <button>Genera</button>
-            <button>Annulla</button>
+        <!-- Bottoni -------------- -->
+        <div class="generator-ticket-row col-lg-12">
+            <button id="generate-button">Genera</button>
+            <button id="cancel-button">Annulla</button>
+        </div>
+        <!-- ---------------------------- -->
+    </div>
+    <!-- End Generator Ticket -->
+    <h2>Il tuo biglietto</h2>
+
+    <!-- Generator Result -->
+    <div class="generator-ticket-result container">
+        <div>
+            <h3>Dettaglio passeggeri</h3>
+            <div class="nome-passeggero col-lg-4">
+                <h3>Nome Passeggero:</h3>
+                <div id="nome-cognome"></div>
+            </div>
+
+            <div class="bp-sconto col-lg-2 bordo">
+                <h3>Offerta</h3>
+                <div id="offer-type"></div>
+            </div>
+
+            <div class="bp-carrozza col-lg-2 bordo">
+                <h3>Carrozza</h3>
+                <div id="numero-carrozza"></div>
+            </div>
+
+            <div class="bp-codice col-lg-2 bordo">
+                <h3>Codice CP</h3>
+                <div id="codice-cp"></div>
+            </div>
+
+            <div class="bp-prezzo-biglietto col-lg-2 bordo">
+                <h3>Prezzo Biglietto</h3>
+                <div id="costo-biglietto"></div>
+            </div>
         </div>
     </div>
+    <!-- End Generator Result -->
 
     <script src="js/script.js"></script>
 </body>

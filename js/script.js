@@ -63,6 +63,8 @@ generateTicketButton.addEventListener('click', function() {
     document.getElementById('codice-cp').innerHTML = codiceCp;
     // Costo Biglietto
     document.getElementById('costo-biglietto').innerHTML = prezzoBiglietto.toFixed(2);
+    // Biglietto stampato
+    document.getElementById('biglietto').className = "show";
     // ------------------------- ->
 });
 
@@ -70,13 +72,13 @@ generateTicketButton.addEventListener('click', function() {
 var cancelTicketButton = document.getElementById('cancel-button');
 cancelTicketButton.addEventListener('click', function() {
 
+    // Generator Result
+    document.getElementById('biglietto').className = "hidden";
+
     // Nome passeggero
     document.getElementById('nome-utente').value = '';
     // Offerta
     document.getElementById('eta-utente').value = 'maggiorenne';
     // Prezzo
     document.getElementById('distance-km').value = '';
-
-    // Generator Result
-    document.getElementById('generator-ticket-result').style.display = "none";
-})
+});
